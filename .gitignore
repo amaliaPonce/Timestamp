@@ -16,3 +16,4 @@ npm-debug.log
 *.swp
 *.swo
 *.swn
+.vercel
