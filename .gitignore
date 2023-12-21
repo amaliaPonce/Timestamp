@@ -1,0 +1,18 @@
+# Dependencias
+node_modules/
+
+# Archivo de configuración
+package-lock.json
+
+# Archivos de log
+npm-debug.log
+
+# Entorno de desarrollo
+.env
+
+# IDEs y editores específicos
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
