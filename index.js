@@ -1,7 +1,7 @@
 import express from 'express';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get('/api/:date?', (req, res) => {
     const { date } = req.params;
@@ -30,6 +30,10 @@ app.get('/api/:date?', (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor iniciado en el puerto ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(PORT, () => {
+        console.log(`Servidor iniciado en el puerto ${PORT}`);
+    });
+}
+
+export default app;
